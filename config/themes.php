@@ -24,6 +24,19 @@ return [
                 'package_assets_directory' => 'src/Resources/assets',
             ],
         ],
+
+        'techblue' => [
+            'name' => 'TechBlue',
+            'assets_path' => 'public/themes/shop/techblue',
+            'views_path' => 'resources/themes/techblue/views',
+            'parent' => 'default',
+
+            'vite' => [
+                'hot_file' => 'shop-techblue-vite.hot',
+                'build_directory' => 'themes/shop/techblue/build',
+                'package_assets_directory' => 'src/Resources/assets',
+            ],
+        ],
     ],
 
     /*

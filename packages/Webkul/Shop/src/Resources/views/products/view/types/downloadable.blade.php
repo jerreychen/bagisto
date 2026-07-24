@@ -54,7 +54,14 @@
                             class="cursor-pointer max-sm:text-sm ltr:ml-1 rtl:mr-1"
                             v-pre
                         >
-                            {{ $link->title . ' + ' . core()->currency($link->price) }}
+                            @auth('customer')
+                                {{ $link->title . ' + ' . core()->currency($link->price) }}
+                            @else
+                                {{ $link->title }}
+                                <a href="{{ route('shop.customer.session.index') }}" class="login-prompt-link text-xs font-medium">
+                                    @lang('shop::app.products.prices.login-to-view')
+                                </a>
+                            @endauth
                         </label>
                     </div>
 

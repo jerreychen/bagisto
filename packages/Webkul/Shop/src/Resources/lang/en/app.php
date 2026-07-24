@@ -762,6 +762,8 @@ return [
 
     'products' => [
         'prices' => [
+            'login-to-view' => 'Please log in to view price',
+
             'grouped' => [
                 'starting-at' => 'Starting at',
             ],

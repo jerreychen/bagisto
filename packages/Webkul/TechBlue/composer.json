@@ -1,0 +1,18 @@
+{
+    "name": "bagisto/tech-blue",
+    "type": "bagisto-theme",
+    "description": "TechBlue - A futuristic blue and white tech-themed storefront for Bagisto",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Webkul\\TechBlue\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webkul\\TechBlue\\Providers\\TechBlueServiceProvider"
+            ]
+        }
+    }
+}
