@@ -762,6 +762,8 @@ return [
 
     'products' => [
         'prices' => [
+            'login-to-view' => '请登录',
+
             'grouped' => [
                 'starting-at' => '起价',
             ],

@@ -20,7 +20,14 @@
                                     class="mt-1.5 text-zinc-500"
                                     v-pre
                                 >
-                                    {{ $groupedProduct->associated_product->name . ' + ' . core()->currency($groupedProduct->associated_product->getTypeInstance()->getFinalPrice()) }}
+                                    @auth('customer')
+                                        {{ $groupedProduct->associated_product->name . ' + ' . core()->currency($groupedProduct->associated_product->getTypeInstance()->getFinalPrice()) }}
+                                    @else
+                                        {{ $groupedProduct->associated_product->name }}
+                                        <a href="{{ route('shop.customer.session.index') }}" class="login-prompt-link text-xs font-medium">
+                                            @lang('shop::app.products.prices.login-to-view')
+                                        </a>
+                                    @endauth
                                 </p>
 
                             </div>

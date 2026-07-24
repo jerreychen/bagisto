@@ -352,7 +352,7 @@
                                     </span>
                                 @endif
 
-                                @if (count($product->getTypeInstance()->getCustomerGroupPricingOffers()))
+                                @if (auth()->guard('customer')->check() && count($product->getTypeInstance()->getCustomerGroupPricingOffers()))
                                     <div class="mt-2.5 grid gap-1.5">
                                         @foreach ($product->getTypeInstance()->getCustomerGroupPricingOffers() as $offer)
                                             <p class="text-zinc-500 [&>*]:text-black">

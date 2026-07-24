@@ -40,6 +40,7 @@ use Webkul\SocialLogin\Providers\SocialLoginServiceProvider;
 use Webkul\SocialShare\Providers\SocialShareServiceProvider;
 use Webkul\Stripe\Providers\StripeServiceProvider;
 use Webkul\Tax\Providers\TaxServiceProvider;
+use Webkul\TechBlue\Providers\TechBlueServiceProvider;
 use Webkul\Theme\Providers\ThemeServiceProvider;
 use Webkul\User\Providers\UserServiceProvider;
 
@@ -91,6 +92,7 @@ return [
     SocialShareServiceProvider::class,
     StripeServiceProvider::class,
     TaxServiceProvider::class,
+    TechBlueServiceProvider::class,
     ThemeServiceProvider::class,
     UserServiceProvider::class,
 ];
